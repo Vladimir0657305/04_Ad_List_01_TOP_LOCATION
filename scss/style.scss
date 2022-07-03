@@ -1,0 +1,170 @@
+/* Обнуление */
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+body{
+	font-family: 'Nunito';
+	font-size: 16px;
+}
+.toplocation {
+	width: 312px;
+	height: 450px;
+	border: 1px solid #EBEEF7;
+	border-radius: 10px;
+}
+.head {
+	display: flex;
+	justify-content: space-between;
+}
+.head h4 {
+	font-weight: 600;
+	margin: 24px 24px 20px 24px;
+}
+.head svg {
+	margin: 24px 24px 20px 24px;
+}
+.inputfield {
+	--background: #ffffff;
+	--text-color: #414856;
+	--primary-color: #4F29F0;
+	--border-radius: 10px;
+	--width: 190px;
+	--height: 55px;
+	width: 260px;
+	height: 48px;
+	font-family: inherit;
+	font-size: 87%;
+	border: 1px solid #EBEEF7;
+	border-radius: 10px;
+	margin: 0px 24px 20px 24px;
+	display: flex;
+	flex-direction:row;
+	align-items: center;
+}
+.inputfield svg {
+	width: 20px;
+	height: 20px;
+	margin: 14px 6px 14px 17px;
+}
+
+input[type="text"] {
+	position: relative;
+	width: 190px;
+	font: 400 14px 'Nunito', sans-serif;
+	color: #414856;;
+	border: 0;
+	box-sizing: border-box;
+	outline: none;
+	padding: 0 0 0 6px;
+	transition: width .3s ease;
+	z-index: 10;
+	opacity: 1;
+	cursor: pointer;
+}
+.checkboks {
+	width: 310px;
+}
+.chekfilter {
+	width: 264px;
+	height: 290px;
+	color: #464d61;
+	font-weight: 400;
+	display: flex;
+	flex-direction: column;
+}
+input[type="checkbox"]:checked~ {
+	.geekmark {
+		color: #00aaff;
+		font-weight: 400;
+		font-size: 100%;
+		line-height: 24px;
+		border: 2px solid #00aaff;
+	}
+}
+.maid {
+	position: relative;
+	display: flex;
+	cursor: pointer;
+	font-size: 14px;
+	margin: 0 0 12px 10px;
+}
+input[type=checkbox] {
+	visibility: hidden;
+}
+.geekmark {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background-color: #fff;
+	color: #464d61;
+	font-weight: 400;
+	font-size: 100%;
+	line-height: 24px;
+	padding: 0px 0 0 8px;
+	border: 2px solid #dadde5;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.geekmark p {
+	width: 220px;
+	margin: -4px 0 0 16px;
+	text-align: left;
+}
+.maid:hover input~.geekmark {
+	background-color: #eee;
+}
+.maid input:checked~.geekmark {
+	background-color: #00aaff;
+}
+checked */
+.geekmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+.maid input:checked~.geekmark:after {
+	display: block;
+}
+.maid .geekmark:after {
+	left: 6px;
+	bottom: 4px;
+	width: 6px;
+	height: 12px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
